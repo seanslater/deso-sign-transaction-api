@@ -10,7 +10,6 @@ exports.signHex = async (req, res) => {
 
   //Decrypt seed hex and use decrypted seed hex to sign transaction
   const seedHex = decryptSeedHex(encryptedSeedHex, hostEncryptionKey);
-  // Note: if you need to sign a transaction with a derived key,
   const signedHex = await signTx(transactionHex, seedHex, { isDerivedKey });
   //Return JSON object with signedHex
   return res.status(200).json({

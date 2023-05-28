@@ -18,7 +18,8 @@ How to use:
 {
   transactionHex: "",
   encryptedSeedHex: "",
-  hostEncryptionKey: ""
+  hostEncryptionKey: "",
+  isDerivedKey: boolean,
 }
 
 5) You should get back a JSON object with a signedHex property. This signedHex can then be entered into the request body of the POST submit-transaction endpoint:
